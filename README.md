@@ -16,6 +16,7 @@
 ![python](https://github.com/yangxuanxc/wechat_friends/blob/master/source/5.jpeg)
 #### 6：微信自动发送与回复消息
 ![python](https://github.com/yangxuanxc/wechat_friends/blob/master/source/6.jpg)
+<img weight="300" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/6.jpg" alt="">
 
 ## 依赖
 本程序使用python3，请在python3环境下运行
@@ -45,7 +46,7 @@ python3 analyse.py
 
 
 ## 赞赏与支持
-- 如果你觉得本文还不错，请微信扫描下发小程序码赞赏支持，谢谢。
+- 如果你觉得本文还不错，请微信扫描下方小程序码赞赏支持，谢谢。
 - 别忘记点个start哦。
 
 <img height="300" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/zs.jpeg" alt="">
