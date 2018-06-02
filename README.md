@@ -15,7 +15,7 @@
 #### 5：将所有好友的头像合并成一张大图
 ![python](https://github.com/yangxuanxc/wechat_friends/blob/master/source/5.jpeg)
 #### 6：微信自动发送与回复消息
-![python](https://github.com/yangxuanxc/wechat_friends/blob/master/source/6.jpeg)
+![python](https://github.com/yangxuanxc/wechat_friends/blob/master/source/6.jpg)
 
 ## 依赖
 本程序使用python3，请在python3环境下运行
@@ -41,23 +41,12 @@ python3 analyse.py
 
 扫码下方二维码关注
 
-<table>
-    <tr>
-        <td style="padding:0"><img src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/ewm.jpeg" alt=""></td>
-        <td style="padding:0"><img src="" alt=""></td>
-    </tr>
+<img height="300" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/ewm.png" alt="">
 
-</table>
 
 ## 赞赏与支持
 - 如果你觉得本文还不错，请微信扫描下发小程序码赞赏支持，谢谢。
 - 别忘记点个start哦。
 
-
-<table>
-    <tr>
-        <td style="padding:0"><img src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/zs.jpeg" alt=""></td>
-        <td style="padding:0"><img src="" alt=""></td>
-    </tr>
-
-</table>
+<img height="300" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/zs.jpeg" alt="">
+    
