@@ -24,6 +24,9 @@
 - pyecharts：pip3 install pyecharts
 - pip3 install itchat
 
+地图数据包：
+pip3 install echarts-china-provinces-pypkg
+
 ## 运行
 #### 获取用户信息
 python3 get_user_info.py
