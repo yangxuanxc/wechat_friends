@@ -5,6 +5,7 @@
 import itchat
 import json
 import requests
+import codecs
 
 sex_dict = {}
 sex_dict['0'] = "其他"
@@ -29,7 +30,7 @@ def download_images(frined_list):
 
 def save_data(frined_list):
     out_file_name = "./data/friends.json"
-    with open(out_file_name, 'w') as json_file:
+    with codecs.open(out_file_name, 'w', encoding='utf-8') as json_file:
         json_file.write(json.dumps(frined_list,ensure_ascii=False))
 
 @itchat.msg_register(itchat.content.TEXT)
@@ -69,8 +70,3 @@ if __name__ == '__main__':
     user = itchat.search_friends(name=u'二胖')[0]
     user.send(u'hello,这是一条来自机器人的消息')
     itchat.run()
-        
-
-
-
-    
