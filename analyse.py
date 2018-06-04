@@ -12,6 +12,7 @@ import jieba.analyse
 import PIL.Image as Image
 import os
 import math
+import codecs
 
 
 def get_pie(item_name,item_name_list,item_num_list):
@@ -166,7 +167,7 @@ def mergeImage():
 if __name__ == '__main__':
     
     in_file_name = './data/friends.json'
-    with open(in_file_name) as f:
+    with codecs.open(in_file_name, encoding='utf-8') as f:
         friends = json.load(f)
     
 
@@ -201,7 +202,7 @@ if __name__ == '__main__':
 
     #昵称
     num_list = [5 for i in range(1,len(NickName_list)+1)]
-    word_cloud('微信好友昵称',NickName_list,num_list,[18,18]])
+    word_cloud('微信好友昵称',NickName_list,num_list,[18,18])
 
     #微信好友签名关键词
     name_list,num_list = counter2list(Signature_counter.most_common(200))
@@ -209,5 +210,3 @@ if __name__ == '__main__':
     
     #头像合成
     mergeImage()
-
-
