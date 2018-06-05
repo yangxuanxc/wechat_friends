@@ -25,7 +25,7 @@
 - pip3 install itchat
 - pip3 install biezhi
 
-地图数据包：
+地图数据包：  
 pip3 install echarts-china-provinces-pypkg  
 pip3 install echarts-countries-pypkg
 
