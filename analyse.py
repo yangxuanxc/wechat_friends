@@ -121,7 +121,7 @@ def mergeImage():
     #遍历文件夹获取所有图片的路径
     for root, dirs, files in os.walk(dirName):
             for file in files:
-                if "jpg" in file:
+                if "jpg" in file and os.path.getsize(os.path.join(root, file)) > 0:
                         photo_path_list.append(os.path.join(root, file))
 
     #print(photo_path_list)
