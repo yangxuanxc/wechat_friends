@@ -2,6 +2,7 @@
 #author:微信公众号：大数据前沿
 #查看代码讲解，视频教程，请微信添加好友搜索公众号[大数据前沿]查看历史消息获取。
 import json
+import re
 from pyecharts import Bar
 from pyecharts import Grid
 from pyecharts import WordCloud
@@ -101,6 +102,7 @@ def counter2list(_counter):
     return name_list,num_list
 
 def get_tag(text,cnt):
+    text = re.sub(r"<span.*><span>", "", text)
     print ('正在分析句子:',text)
     tag_list = jieba.analyse.extract_tags(text)
     for tag in tag_list:
