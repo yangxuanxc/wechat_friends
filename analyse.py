@@ -124,13 +124,16 @@ def mergeImage():
     for root, dirs, files in os.walk(dirName):
             for file in files:
                 if "jpg" in file and os.path.getsize(os.path.join(root, file)) > 0:
-                        photo_path_list.append(os.path.join(root, file))
+                    photo_path_list.append(os.path.join(root, file))
+                elif "jpg" in file and os.path.getsize(os.path.join(root, file)) == 0:
+                    photo_path_list.append(os.path.join("./source", "empty.jpg"))
 
     #print(photo_path_list)
     pic_num = len(photo_path_list)
     #每行每列显示图片数量
     line_max = int(math.sqrt(pic_num))
     row_max = int(math.sqrt(pic_num))
+    print(line_max, row_max, pic_num)
 
     if line_max > 20:
         line_max = 20
