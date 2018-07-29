@@ -2,6 +2,7 @@
 #author:微信公众号：大数据前沿
 #查看代码讲解，视频教程，请微信添加好友搜索公众号[大数据前沿]查看历史消息获取。
 import json
+import re
 from pyecharts import Bar
 from pyecharts import Grid
 from pyecharts import WordCloud
@@ -101,6 +102,7 @@ def counter2list(_counter):
     return name_list,num_list
 
 def get_tag(text,cnt):
+    text = re.sub(r"<span.*><span>", "", text)
     print ('正在分析句子:',text)
     tag_list = jieba.analyse.extract_tags(text)
     for tag in tag_list:
@@ -122,13 +124,16 @@ def mergeImage():
     for root, dirs, files in os.walk(dirName):
             for file in files:
                 if "jpg" in file and os.path.getsize(os.path.join(root, file)) > 0:
-                        photo_path_list.append(os.path.join(root, file))
+                    photo_path_list.append(os.path.join(root, file))
+                elif "jpg" in file and os.path.getsize(os.path.join(root, file)) == 0:
+                    photo_path_list.append(os.path.join("./source", "empty.jpg"))
 
     #print(photo_path_list)
     pic_num = len(photo_path_list)
     #每行每列显示图片数量
     line_max = int(math.sqrt(pic_num))
     row_max = int(math.sqrt(pic_num))
+    print(line_max, row_max, pic_num)
 
     if line_max > 20:
         line_max = 20
