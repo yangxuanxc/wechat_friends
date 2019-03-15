@@ -6,6 +6,7 @@ import itchat
 import json
 import requests
 import codecs
+from tqdm import tqdm
 
 sex_dict = {}
 sex_dict['0'] = "其他"
@@ -21,7 +22,7 @@ message_dict = {
 def download_images(frined_list):
     image_dir = "./images/"
     num = 1
-    for friend in frined_list:
+    for friend in tqdm(frined_list, '下载好友头像', ascii=True, ncols=100):
         image_name = str(num)+'.jpg'
         num+=1
         img = itchat.get_head_img(userName=friend["UserName"])
@@ -47,11 +48,10 @@ def print_content(msg):
 
 if __name__ == '__main__':
     itchat.auto_login()
-    
-    friends = itchat.get_friends(update=True)[0:]#获取好友信息
+    friends = itchat.get_friends(update=True)[0:]  #获取好友信息
     friends_list = []
 
-    for friend in friends:
+    for friend in tqdm(friends, '获取好友信息', ascii=True, ncols=100):
         item = {}
         item['NickName'] = friend['NickName']
         item['HeadImgUrl'] = friend['HeadImgUrl']
@@ -65,8 +65,3 @@ if __name__ == '__main__':
 
     save_data(friends_list)
     download_images(friends_list)
-
-    
-    user = itchat.search_friends(name=u'二胖')[0]
-    user.send(u'hello,这是一条来自机器人的消息')
-    itchat.run()

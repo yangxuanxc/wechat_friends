@@ -1,0 +1,8 @@
+*.py[cod]
+analyse/*.png
+analyse/*.html
+data/friends.json
+images/*.jpg
+
+.vscode/
+.idea/

@@ -18,31 +18,28 @@
 <img height="500" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/6.jpg" alt="">
 
 ## 依赖
-本程序使用python3，请在python3环境下运行
-#### Python 3
-- PIL: pip3 install pillow
-- pyecharts：pip3 install pyecharts
-- pip3 install itchat
-- pip3 install jieba
-
-地图数据包：  
-pip3 install echarts-china-provinces-pypkg  
-pip3 install echarts-countries-pypkg
+本程序使用python3，请在python3环境下运行。使用pipenv管理依赖，需要先安装：
+```bash
+pip install --upgrade pipenv
+pipenv install
+```
 
 ## 运行
 #### 获取用户信息
-需要将get_user_info.py第70行的二胖，改成随意一个好友的名字或者自己的名字  
-  
-python3 get_user_info.py
+```bash
+pipenv run python get_user_info.py
+```
 执行后会在data目录下生成friends.json
 会在images目录下存放所有好友的头像
 #### 统计用户信息
-python3 analyse.py
+```bash
+pipenv run python analyse.py
+```
 会在analyse文件夹下生产合成后的图片以及可视化的文件
 
 ## 教程
 本程序作者编写了介绍文档并且录制了相关视频讲解代码，如果有需要的朋友
-- 请关注微信公众号：**大数据前沿** 
+- 请关注微信公众号：**大数据前沿**
 - 获得视频教程请在消息窗口回复：**微信好友**
 - 同时更详细的介绍以及该程序更多的扩展请查看公众号历史消息查看相应文章获取。
 
@@ -56,4 +53,3 @@ python3 analyse.py
 - 别忘记点个start哦。
 
 <img height="300" align="center" src="https://github.com/yangxuanxc/wechat_friends/blob/master/source/zs.jpeg" alt="">
-    
