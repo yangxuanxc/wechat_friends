@@ -191,7 +191,8 @@ if __name__ == '__main__':
         #昵称
         NickName_list.append(friend['NickName'])
         #签名关键词提取
-        get_tag(friend['Signature'],Signature_counter)
+        signature=re.sub(r"<([^ ]*).*>(.*)</(.*)>", " ", friend["Signature"])
+        get_tag(signature,Signature_counter)
         
 
     #性别
